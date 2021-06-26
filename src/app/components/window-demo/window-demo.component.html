@@ -1,0 +1,17 @@
+<ngx-mac-view [os]="os">
+  <ngx-mac-window [os]="os" [height]="height" [width]="width"></ngx-mac-window>
+</ngx-mac-view>
+<ngx-mac-view [os]="os" marginTop="20px">
+  <ngx-mac-box label="Code">
+    &lt;ngx-mac-window [os]="'{{os}}'" [height]="'{{height}}'" [width]="'{{width}}'">&lt;/ngx-mac-window>
+  </ngx-mac-box>
+</ngx-mac-view>
+<ngx-mac-view [os]="os">
+  <ngx-mac-text-input [os]="os" label="Width" [(ngModel)]="width"></ngx-mac-text-input>
+</ngx-mac-view>
+<ngx-mac-view [os]="os">
+  <ngx-mac-text-input [os]="os" label="Height" [(ngModel)]="height"></ngx-mac-text-input>
+</ngx-mac-view>
+
+<app-os-switch [(os)]="os" (osChange)="osChange.emit($event)"
+               [(autoOs)]="autoOs" (autoOsChange)="autoOsChange.emit($event)"></app-os-switch>

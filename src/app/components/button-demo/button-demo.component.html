@@ -1,0 +1,17 @@
+
+<ngx-mac-view [os]="os">
+  <ngx-mac-button [os]="os" [color]="color">Button</ngx-mac-button>
+</ngx-mac-view>
+<ngx-mac-view [os]="os" marginTop="20px">
+  <ngx-mac-box label="Code">
+    &lt;ngx-mac-button [os]="'{{os}}'" [color]="'{{color}}'">Button&lt;/ngx-mac-button>
+  </ngx-mac-box>
+</ngx-mac-view>
+<ngx-mac-view [os]="os">
+  <ngx-mac-label [os]="os">Color:</ngx-mac-label>
+  <ngx-mac-radio label="Default" [value]="'default'" [(ngModel)]="color" [os]="os"></ngx-mac-radio>
+  <ngx-mac-radio label="Blue" [value]="'blue'" [(ngModel)]="color" [os]="os"></ngx-mac-radio>
+  <ngx-mac-radio label="Pink" [value]="'pink'" [(ngModel)]="color" [os]="os"></ngx-mac-radio>
+</ngx-mac-view>
+<app-os-switch [(os)]="os" (osChange)="osChange.emit($event)"
+               [(autoOs)]="autoOs" (autoOsChange)="autoOsChange.emit($event)"></app-os-switch>

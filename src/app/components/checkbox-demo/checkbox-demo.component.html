@@ -1,0 +1,21 @@
+<ngx-mac-view [os]="os">
+  <ngx-mac-checkbox [os]="os" [label]="label" [(ngModel)]="checked" [disabled]="disabled"></ngx-mac-checkbox>
+</ngx-mac-view>
+
+<ngx-mac-view [os]="os" marginTop="20px">
+  <ngx-mac-box label="Code">
+    &lt;ngx-mac-checkbox [os]="'{{os}}'" [label]="'{{label}}'" [(ngModel)]="{{checked}}" [disabled]="{{disabled}}">&lt;/ngx-mac-checkbox>
+  </ngx-mac-box>
+</ngx-mac-view>
+<ngx-mac-view [os]="os">
+  <ngx-mac-text-input [os]="os" label="Label" [(ngModel)]="label"></ngx-mac-text-input>
+</ngx-mac-view>
+<ngx-mac-view [os]="os">
+  <ngx-mac-radio [os]="os" [(ngModel)]="checked" [value]="true" label="True"></ngx-mac-radio>
+  <ngx-mac-radio [os]="os" [(ngModel)]="checked" [value]="false" label="False"></ngx-mac-radio>
+</ngx-mac-view>
+<ngx-mac-view [os]="os">
+  <ngx-mac-checkbox [os]="os" label="Disabled" [(ngModel)]="disabled"></ngx-mac-checkbox>
+</ngx-mac-view>
+<app-os-switch [(os)]="os" (osChange)="osChange.emit($event)"
+               [(autoOs)]="autoOs" (autoOsChange)="autoOsChange.emit($event)"></app-os-switch>

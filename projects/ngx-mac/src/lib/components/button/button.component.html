@@ -1,0 +1,28 @@
+<button data-radium="true"
+        [disabled]="disabled"
+        [type]="type"
+        (click)="onClick.emit($event)"
+        [class]="os"
+        (NgxMacMousedown)="mousedown = $event"
+        (NgxMacWindowBlur)="windowBlur = $event"
+        (NgxMacMouseover)="mouseover = $event"
+        [ngStyle]="style"
+        [class.mousedown]="mousedown"
+        [class.blur]="windowBlur"
+        [style.margin]="margin | styleValue"
+        [style.marginBottom]="marginBottom | styleValue"
+        [style.marginRight]="marginRight | styleValue"
+        [style.marginTop]="marginTop | styleValue"
+        [style.marginLeft]="marginLeft | styleValue"
+        [style.padding]="padding | styleValue : os === 'mac' ? '0 13px' : '0 32px'"
+        [style.paddingTop]="paddingTop | styleValue"
+        [style.paddingBottom]="paddingBottom | styleValue"
+        [style.paddingLeft]="paddingLeft | styleValue"
+        [style.paddingRight]="paddingRight | styleValue"
+        [style.fontSize]="size | styleValue:'13px'">
+  <ng-content></ng-content>
+</button>
+
+<!--<button type="button" data-radium="true" >-->
+<!--  Press me!-->
+<!--</button>-->

@@ -1,0 +1,26 @@
+<span class="text-wrap"
+      [class]="os"
+      [NgxMacBold]="bold"
+      [style.margin]="margin | styleValue"
+      [style.marginBottom]="marginBottom | styleValue"
+      [style.marginRight]="marginRight | styleValue"
+      [style.marginTop]="marginTop | styleValue"
+      [style.marginLeft]="marginLeft | styleValue"
+      [style.padding]="padding | styleValue"
+      [style.paddingTop]="paddingTop | styleValue"
+      [style.paddingBottom]="paddingBottom | styleValue"
+      [style.paddingLeft]="paddingLeft | styleValue"
+      [style.paddingRight]="paddingRight | styleValue"
+      [style.fontSize]="size | styleValue:'13px'"
+      [style.height]="height | styleValue"
+      [style.width]="width | styleValue"
+      [style.color]="color"
+      [style.textAlign]="textAlign">
+  <ng-content></ng-content>
+</span>
+
+<!--[NgxMacPadding]="padding"-->
+<!--[paddingTop]="paddingTop"-->
+<!--[paddingLeft]="paddingLeft"-->
+<!--[paddingRight]="paddingRight"-->
+<!--[paddingBottom]="paddingBottom"-->

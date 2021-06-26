@@ -1,0 +1,41 @@
+<ngx-mac-view [os]="os">
+  <ngx-mac-segmented-control >
+    <ngx-mac-segmented-control-item label="text1">
+      <ngx-mac-text [os]="os">
+        text1
+      </ngx-mac-text>
+    </ngx-mac-segmented-control-item>
+    <ngx-mac-segmented-control-item label="text2">
+      <ngx-mac-text [os]="os">
+        text2
+      </ngx-mac-text>
+    </ngx-mac-segmented-control-item>
+  </ngx-mac-segmented-control>
+</ngx-mac-view>
+
+<ngx-mac-view [os]="os" marginTop="20px">
+  <ngx-mac-box label="Code">
+    <br>&lt;ngx-mac-segmented-control>
+    <br>&lt;ngx-mac-segmented-control-item label="text1">
+    <br>&lt;ngx-mac-text [os]="os">
+    <br>text1
+    <br>&lt;/ngx-mac-text>
+    <br>&lt;/ngx-mac-segmented-control-item>
+    <br>&lt;ngx-mac-segmented-control-item label="text2">
+    <br>&lt;ngx-mac-text [os]="os">
+    <br>&lt;text2
+    <br>&lt;/ngx-mac-text>
+    <br>&lt;/ngx-mac-segmented-control-item>
+    <br>&lt;/ngx-mac-segmented-control>
+  </ngx-mac-box>
+</ngx-mac-view>
+
+<ngx-mac-view>
+  <ngx-mac-text color="red">
+    Only MAC style is supported
+  </ngx-mac-text>
+</ngx-mac-view>
+
+
+<app-os-switch [(os)]="os" (osChange)="osChange.emit($event)"
+               [(autoOs)]="autoOs" (autoOsChange)="autoOsChange.emit($event)"></app-os-switch>

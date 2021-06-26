@@ -1,0 +1,29 @@
+<div data-radium="true"
+     class="text-input-wrap"
+     [class]="os"
+     [style.zIndex]="focus ? 3 : 2"
+     [style.margin]="margin | styleValue"
+     [style.marginTop]="marginTop | styleValue"
+     [style.marginRight]="marginRight | styleValue"
+     [style.marginLeft]="marginLeft | styleValue"
+     [style.marginBottom]="marginBottom | styleValue"
+     [style.width]="width | styleValue">
+  <span class="label-wrap">{{label}}</span>
+  <div data-radium="true" style="position: relative;">
+    <div data-radium="true">
+      <div data-radium="true" [class.border-div]="focus"></div>
+    </div>
+    <div>
+      <input type="text"
+             [ngStyle]="style"
+             [placeholder]="placeholder"
+             (focus)="focus = true"
+             (blur)="focus = false"
+             (mouseover)="mouseover = true"
+             (mouseleave)="mouseover = false"
+             [(ngModel)]="value"
+             (ngModelChange)="onChangeCallback($event)"
+             data-radium="true">
+    </div>
+  </div>
+</div>

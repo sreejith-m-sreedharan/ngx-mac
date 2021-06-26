@@ -1,0 +1,24 @@
+<div class="window-container"
+     [class]="os"
+     (NgxMacWindowBlur)="windowBlur = $event"
+     [class.windowBlur]="windowBlur"
+     [style.background]="background | styleValue : os === 'mac' ? '#ECECEC' : '#FFFFFF'"
+     [style.height]="height | styleValue : '100vh'"
+     [style.width]="width | styleValue : '100vw'"
+     [style.borderColor]="os === 'windows' ? (windowBlur ? '#AAAAAA' : (color | styleValue: '#0063AE')) : ''">
+  <ng-content select="ngx-mac-title-bar"></ng-content>
+    <ngx-mac-view class="window-content-container"
+                      [os]="os"
+                      [layout]="layout"
+                      [padding]="padding"
+                      [paddingTop]="paddingTop"
+                      [paddingLeft]="paddingLeft"
+                      [paddingBottom]="paddingBottom"
+                      [paddingRight]="paddingRight"
+                      [horizontalAlignment]="horizontalAlignment"
+                      [verticalAlignment]="verticalAlignment"
+                      [height]="'100%'"
+                      [width]="'100%'">
+      <ng-content></ng-content>
+    </ngx-mac-view>
+</div>

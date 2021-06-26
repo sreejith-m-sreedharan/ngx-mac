@@ -1,0 +1,15 @@
+<ngx-mac-view [os]="os">
+  <ngx-mac-text [os]="os">
+    text
+  </ngx-mac-text>
+</ngx-mac-view>
+
+<ngx-mac-view [os]="os" marginTop="20px">
+  <ngx-mac-box label="Code">
+    &lt;ngx-mac-text [os]="'{{os}}'">text&lt;/ngx-mac-text>
+  </ngx-mac-box>
+</ngx-mac-view>
+
+<app-os-switch [(os)]="os" (osChange)="osChange.emit($event)"
+               [(autoOs)]="autoOs" (autoOsChange)="autoOsChange.emit($event)"
+></app-os-switch>

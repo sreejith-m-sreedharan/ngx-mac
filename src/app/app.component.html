@@ -1,0 +1,114 @@
+
+<!--<ng-template #icon1>-->
+<!--  <svg x="0px" y="0px" width="25px" height="21.7px" viewBox="0 0 25 21.7">-->
+<!--    <polygon points="6.2,21.7 0,10.8 6.2,0 18.8,0 25,10.8 18.8,21.7 "/>-->
+<!--  </svg>-->
+<!--</ng-template>-->
+<!--<ng-template #icon2>-->
+<!--  <svg x="0px" y="0px" width="25px" height="25px" viewBox="0 0 25 25">-->
+<!--    <circle cx="12.5" cy="12.5" r="12.5"/>-->
+<!--  </svg>-->
+<!--</ng-template>-->
+<!--<ng-template #icon3>-->
+<!--  <svg x="0px" y="0px" width="25px" height="23.8px" viewBox="0 0 25 23.8">-->
+<!--    <polygon points="12.5,0 16.4,7.8 25,9.1 18.8,15.2 20.2,23.8 12.5,19.7 4.8,23.8 6.2,15.2 0,9.1 8.6,7.8 "/>-->
+<!--  </svg>-->
+<!--</ng-template>-->
+<!--<ngx-mac-window [os]="os" [padding]="'0px'">-->
+<!--  <ngx-mac-title-bar [os]="os" [title]="os + '系统'">-->
+<!--&lt;!&ndash;    <ngx-mac-toolbar>&ndash;&gt;-->
+<!--&lt;!&ndash;      <ngx-mac-toolbar-nav [(selectedIndex)]="selectedIndex">&ndash;&gt;-->
+<!--&lt;!&ndash;        <ngx-mac-toolbar-nav-item [title]="'Item 1'" [icon]="icon1"></ngx-mac-toolbar-nav-item>&ndash;&gt;-->
+<!--&lt;!&ndash;        <ngx-mac-toolbar-nav-item [title]="'Item 2'" [icon]="icon2"></ngx-mac-toolbar-nav-item>&ndash;&gt;-->
+<!--&lt;!&ndash;        <ngx-mac-toolbar-nav-item [title]="'Item 3'" [icon]="icon3"></ngx-mac-toolbar-nav-item>&ndash;&gt;-->
+<!--&lt;!&ndash;      </ngx-mac-toolbar-nav>&ndash;&gt;-->
+<!--&lt;!&ndash;    </ngx-mac-toolbar>&ndash;&gt;-->
+<!--  </ngx-mac-title-bar>-->
+<!--&lt;!&ndash;  <ngx-mac-view layout="vertical" [width]="'100%'">&ndash;&gt;-->
+<!--&lt;!&ndash;    <ngx-mac-view [width]="'100%'">&ndash;&gt;-->
+<!--&lt;!&ndash;      <ngx-mac-checkbox [os]="os" label="auto" [(ngModel)]="autoOs" (ngModelChange)="autoOsChange($event)" NgxMacMargin marginRight="10px"></ngx-mac-checkbox>&ndash;&gt;-->
+<!--&lt;!&ndash;      <ngx-mac-checkbox [os]="os" label="test" [disabled]="true" [checked]="true" NgxMacMargin marginRight="10px"></ngx-mac-checkbox>&ndash;&gt;-->
+<!--&lt;!&ndash;      <ngx-mac-radio [os]="os" name="os" value="mac" label="mac" [(ngModel)]="os" [disabled]="autoOs" NgxMacMargin marginRight="10px"></ngx-mac-radio>&ndash;&gt;-->
+<!--&lt;!&ndash;      <ngx-mac-radio [os]="os" name="os" value="windows" label="windows" [(ngModel)]="os" [disabled]="autoOs" NgxMacMargin marginRight="10px"></ngx-mac-radio>&ndash;&gt;-->
+<!--&lt;!&ndash;      <ngx-mac-button [os]="os" (onClick)="a()">12</ngx-mac-button>&ndash;&gt;-->
+<!--&lt;!&ndash;    </ngx-mac-view>&ndash;&gt;-->
+<!--&lt;!&ndash;  </ngx-mac-view>&ndash;&gt;-->
+
+<!--  <ngx-mac-view [os]="os" [width]="'100%'">-->
+<!--          <ngx-mac-checkbox [os]="os" label="auto" [(ngModel)]="autoOs" (ngModelChange)="autoOsChange($event)" NgxMacMargin marginRight="10px"></ngx-mac-checkbox>-->
+<!--          <ngx-mac-checkbox [os]="os" label="test" [disabled]="true" [checked]="true" NgxMacMargin marginRight="10px"></ngx-mac-checkbox>-->
+<!--          <ngx-mac-radio [os]="os" name="os" value="mac" label="mac" [(ngModel)]="os" [disabled]="autoOs" NgxMacMargin marginRight="10px"></ngx-mac-radio>-->
+<!--          <ngx-mac-radio [os]="os" name="os" value="windows" label="windows" [(ngModel)]="os" [disabled]="autoOs" NgxMacMargin marginRight="10px"></ngx-mac-radio>-->
+<!--          <ngx-mac-button [os]="os" (onClick)="a()">12</ngx-mac-button>-->
+
+<!--&lt;!&ndash;    <ngx-mac-nav-pane></ngx-mac-nav-pane>&ndash;&gt;-->
+<!--  </ngx-mac-view>-->
+
+<!--  <ngx-mac-segmented-control>-->
+<!--    <ngx-mac-segmented-control-item [title]="'test'">-->
+<!--      <ngx-mac-button>test</ngx-mac-button>-->
+<!--    </ngx-mac-segmented-control-item>-->
+<!--    <ngx-mac-segmented-control-item [title]="'test2'">-->
+<!--      <ngx-mac-button>test</ngx-mac-button>-->
+<!--    </ngx-mac-segmented-control-item>-->
+<!--  </ngx-mac-segmented-control>-->
+<!--</ngx-mac-window>-->
+<!--<ngx-mac-window os="windows" height="300px">-->
+<!--  <ngx-mac-title-bar os="windows" [title]="'123123'">-->
+<!--  </ngx-mac-title-bar>-->
+<!--  <ngx-mac-view os="windows" layout="vertical">-->
+<!--    <ngx-mac-radio os="windows" name="123" value="345" label="345" [checked]="true"></ngx-mac-radio>-->
+<!--    <ngx-mac-radio os="windows" name="123" value="123" label="123" [checked]="false"></ngx-mac-radio>-->
+<!--  </ngx-mac-view>-->
+<!--</ngx-mac-window>-->
+
+
+
+<ngx-mac-window [os]="os" [horizontalAlignment]="'center'">
+  <ngx-mac-title-bar [os]="os"></ngx-mac-title-bar>
+  <ngx-mac-segmented-control >
+    <ngx-mac-segmented-control-item label="Text Input">
+      <app-input-demo  [(os)]="os" [(autoOs)]="autoOs"></app-input-demo>
+    </ngx-mac-segmented-control-item>
+
+    <ngx-mac-segmented-control-item label="Button">
+      <app-button-demo [(os)]="os" [(autoOs)]="autoOs"></app-button-demo>
+    </ngx-mac-segmented-control-item>
+
+    <ngx-mac-segmented-control-item label="Progress Circle">
+      <app-progress-circle [(os)]="os" [(autoOs)]="autoOs"></app-progress-circle>
+    </ngx-mac-segmented-control-item>
+
+    <ngx-mac-segmented-control-item label="Checkbox">
+      <app-checkbox-demo [(os)]="os" [(autoOs)]="autoOs"></app-checkbox-demo>
+    </ngx-mac-segmented-control-item>
+
+    <ngx-mac-segmented-control-item label="Radio">
+      <app-radio-demo [(os)]="os" [(autoOs)]="autoOs"></app-radio-demo>
+    </ngx-mac-segmented-control-item>
+
+    <ngx-mac-segmented-control-item label="Window">
+      <app-window-demo [(os)]="os" [(autoOs)]="autoOs"></app-window-demo>
+    </ngx-mac-segmented-control-item>
+
+    <ngx-mac-segmented-control-item label="Title Bar">
+      <app-title-bar [(os)]="os" [(autoOs)]="autoOs"></app-title-bar>
+    </ngx-mac-segmented-control-item>
+
+    <ngx-mac-segmented-control-item label="Toolbar">
+      <app-toolbar-demo [(os)]="os" [(autoOs)]="autoOs"></app-toolbar-demo>
+    </ngx-mac-segmented-control-item>
+
+    <ngx-mac-segmented-control-item label="Toolbar Nav">
+      <app-toolbar-nav-demo [(os)]="os" [(autoOs)]="autoOs"></app-toolbar-nav-demo>
+    </ngx-mac-segmented-control-item>
+
+    <ngx-mac-segmented-control-item label="Text">
+      <app-text-demo [(os)]="os" [(autoOs)]="autoOs"></app-text-demo>
+    </ngx-mac-segmented-control-item>
+    <ngx-mac-segmented-control-item label="Segmented Control">
+      <app-segmented-control-demo [(os)]="os" [(autoOs)]="autoOs"></app-segmented-control-demo>
+    </ngx-mac-segmented-control-item>
+  </ngx-mac-segmented-control>
+
+</ngx-mac-window>

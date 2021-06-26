@@ -1,0 +1,40 @@
+<div style="user-select: none; cursor: default; flex: 1 1 0;"
+     [style.margin]="margin | styleValue"
+     [style.marginBottom]="marginBottom | styleValue"
+     [style.marginRight]="marginRight | styleValue"
+     [style.marginTop]="marginTop | styleValue"
+     [style.marginLeft]="marginLeft | styleValue"
+     [style.width]="width | styleValue"
+     (NgxMacWindowBlur)="windowBlur = $event">
+  <div class="tab-label-wrap">
+    <div data-radium="true"
+         *ngFor="let segmented of this.segmentedList; let i = index"
+         [class.disabled]="segmented.disabled"
+         [class.selected]="i === model"
+         (mousedown)="segmented.labelMousedown = true"
+         [class.mousedown]="segmented.labelMousedown"
+         [class.blur]="windowBlur"
+         (click)="selectTab(i, segmented)">
+      {{segmented.label}}
+    </div>
+<!--    <div data-radium="true" class="tab-label-wrap left-tab selected">-->
+<!--      Tab 1-->
+<!--    </div>-->
+<!--    <div data-radium="true" class="tab-label-wrap">-->
+<!--      Tab 2-->
+<!--    </div>-->
+<!--    <div data-radium="true" class="tab-label-wrap right-tab">-->
+<!--      Tab 3-->
+<!--    </div>-->
+  </div>
+  <div class="content-wrap"
+       [style.height]="height | styleValue"
+       [style.padding]="padding | styleValue:'23px 18px 22px 18px'"
+       [style.paddingTop]="paddingTop | styleValue"
+       [style.paddingBottom]="paddingBottom | styleValue"
+       [style.paddingLeft]="paddingLeft | styleValue"
+       [style.paddingRight]="paddingRight | styleValue">
+      <ng-content></ng-content>
+<!--      <span style="display: block; user-select: none; cursor: default; font-size: 13px; color: rgb(0, 0, 0);">Content 1</span>-->
+  </div>
+</div>

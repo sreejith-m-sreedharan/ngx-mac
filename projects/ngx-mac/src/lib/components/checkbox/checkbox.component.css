@@ -1,0 +1,130 @@
+:host {
+  font: 13px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.checkbox-wrap {
+  display: flex;
+  position: relative;
+}
+
+input {
+  user-select: none;
+  -webkit-appearance: none;
+  outline: none;
+  border-style: solid;
+}
+
+/************************/
+.windows .checkbox-wrap {
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.windows input {
+  border-width: 2px;
+  padding: 8px;
+  color: #FFFFFF;
+  vertical-align: bottom;
+  margin-right: 6px;
+  margin-top: 0;
+}
+
+.windows .title {
+  user-select: none;
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  margin-top: 1px;
+  color: #000000;
+}
+.windows.disabled .title {
+  color: #BBBBBB;
+}
+/*.windows :hover {*/
+/*  border-color: #000000;*/
+/*}*/
+/*.windows :active {*/
+/*  border-color: rgba(0, 0, 0, 0);*/
+/*  background-color: rgba(0, 0, 0, 0.57);*/
+/*}*/
+
+/*************************/
+.mac.checkbox-wrap {
+  height: 20px;
+  margin-right: 1px;
+}
+
+.mac input {
+  border-width: 1px;
+  border-radius: 3px;
+  padding: 6px;
+  margin: 0 1px;
+  box-shadow: rgba(224, 224, 224, 0.4) 0 1px 0 0 inset;
+  transition: all 0.4s ease 0s;
+  background-color: #FFFFFF;
+  border-color: #B8B8B8;
+}
+
+.mac.blur.checked input {
+  border-color: #B8B8B8;
+  background-color: rgb(255, 255, 255);
+  transition: none 0s ease 0s;
+}
+
+.mac.checked input {
+  box-shadow: none !important;
+  transition: all 0.4s ease 0s;
+  background-color: #3B99FC;
+  border-color: #2C91FC;
+}
+
+.mac.checked .checkbox-style {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.mac.disabled .title {
+  color: #a5a5a5;
+}
+
+.mac.disabled input {
+  background-color: #ececec !important;
+  border-color: #bbbbbb !important;
+}
+
+.mac .checkbox-style {
+  position: absolute;
+  top: 6px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s ease 0s;
+}
+
+.mac .title {
+  display: inline;
+  user-select: none;
+  cursor: default;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
+  color: #000000;
+}
+
+.mac .svg1 {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8px;
+}
+
+.mac .svg2 {
+  z-index: 1;
+  position: absolute;
+  top: 1.5px;
+  left: 0;
+  opacity: 0.37;
+  height: 8px;
+  filter: blur(0.5px);
+}

@@ -1,0 +1,29 @@
+<ngx-mac-view [os]="os">
+  <ngx-mac-window [os]="os" [height]="'500px'" [width]="'100%'">
+    <ngx-mac-title-bar [os]="os">
+      <ngx-mac-toolbar [horizontalAlignment]="'right'">
+        <ngx-mac-button [os]="os">button</ngx-mac-button>
+      </ngx-mac-toolbar>
+    </ngx-mac-title-bar>
+  </ngx-mac-window>
+</ngx-mac-view>
+<ngx-mac-view [os]="os" marginTop="20px">
+  <ngx-mac-box label="Code">
+    &lt;ngx-mac-window [os]="'{{os}}'" [height]="'500px'" [width]="'100%'">
+      <br>&lt;ngx-mac-title-bar [os]="'{{os}}'">
+        <br>&lt;ngx-mac-toolbar [horizontalAlignment]="'right'">
+          <br>&lt;ngx-mac-button [os]="'{{os}}'">button&lt;/ngx-mac-button>
+          <br>&lt;/ngx-mac-toolbar>
+        <br>&lt;/ngx-mac-title-bar>
+      <br>&lt;/ngx-mac-window>
+  </ngx-mac-box>
+</ngx-mac-view>
+
+<ngx-mac-view>
+  <ngx-mac-text color="red">
+    Only the MAC will show it
+  </ngx-mac-text>
+</ngx-mac-view>
+
+<app-os-switch [(os)]="os" (osChange)="osChange.emit($event)"
+               [(autoOs)]="autoOs" (autoOsChange)="autoOsChange.emit($event)"></app-os-switch>

@@ -1,0 +1,17 @@
+<div class="view-wrap"
+     [NgxMacHorizontalAlignment]="horizontalAlignment"
+     [NgxMacVerticalAlignment]="verticalAlignment"
+     [style.margin]="margin | styleValue"
+     [style.marginBottom]="marginBottom | styleValue"
+     [style.marginRight]="marginRight | styleValue"
+     [style.marginTop]="marginTop | styleValue"
+     [style.marginLeft]="marginLeft | styleValue"
+     [style.padding]="padding | styleValue"
+     [style.paddingTop]="paddingTop | styleValue"
+     [style.paddingBottom]="paddingBottom | styleValue"
+     [style.paddingLeft]="paddingLeft | styleValue"
+     [style.paddingRight]="paddingRight | styleValue"
+     [NgxMacLayout]="layout"
+     [style.background]="background | styleValue : (os === 'windows' && '#0063AE')">
+  <ng-content></ng-content>
+</div>

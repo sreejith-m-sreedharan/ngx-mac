@@ -1,0 +1,139 @@
+:host {
+  font: 13px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.radio-wrap {
+  display: flex;
+}
+
+.radio-input-wrap {
+  position: relative;
+  padding-top: 2px;
+}
+
+label {
+  display: flex;
+  position: relative;
+}
+
+input {
+  user-select: none;
+  -webkit-appearance: none;
+  border-style: solid;
+  border-radius: 50%;
+  margin: 0;
+  outline: none;
+}
+
+.label-wrap {
+  user-select: none;
+  cursor: default;
+  color: #000000;
+}
+
+/****************windows*****************/
+.windows-radio-style {
+  position: absolute;
+  top: 7px;
+  left: 9px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #333333;
+}
+
+.windows.radio-wrap {
+  margin-bottom: 21px;
+}
+
+/*.windows .radio-input-wrap {*/
+/*  margin-right: 7px;*/
+/*}*/
+
+.windows input {
+  border-width: 2px;
+  /*border-color: #333333;*/
+  background-color: transparent;
+  padding: 8px;
+  margin-left: 4px;
+  margin-right: 9px;
+}
+
+.windows .label-wrap {
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  display: inline;
+  margin-top: 1px;
+}
+
+.windows.checked input {
+  /*border-color: #0063AE;*/
+}
+/**disabled*/
+.windows.disabled input  {
+  /*border-color: #999999;*/
+}
+.windows.disabled.checked .windows-radio-style {
+  background: #999999;
+}
+.windows.disabled .label-wrap {
+  color: #BBBBBB;
+}
+
+/***************mac***************/
+.mac .radio-input-wrap {
+  margin-right: 2px;
+}
+
+.mac label {
+  height: 20px;
+  margin-right: 1px;
+}
+
+.mac input {
+  border-width: 1px;
+  /*border-color: #B8B8B8;*/
+  background-color: #FFFFFF;
+  padding: 7px;
+  box-shadow: rgba(224, 224, 224, 0.4) 0 1px 0 0 inset;
+  transition: all 0.4s ease 0s;
+  margin: 0 1px;
+}
+
+.mac.checked input {
+  /*border-color: #2C91FC;*/
+  background-color: #3B99FC;
+  box-shadow: none;
+  transition: all 0s ease 0s;
+}
+
+.mac.mousedown.checked input {
+  /*border-color: #006ADC;*/
+  background-color: #0080F6;
+  box-shadow: rgba(19, 68, 119, 0.22) 0 0 0 1px inset;
+  transition: all 0.4s ease 0s;
+}
+
+.mac.blur.checked input {
+  /*border-color: #B8B8B8;*/
+  background-color: #ffffff;
+  transition: none 0s ease 0s;
+}
+
+.mac .label-wrap {
+  display: inline;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
+}
+.mac.disabled input {
+  /*border-color: #B8B8B8;*/
+  background-color: #F1F1F1;
+}
+.mac.disabled .label-wrap {
+  color: #B8B8B8;
+}
+
+.mac.blur.checked.disabled input {
+  /*border-color: #B8B8B8;*/
+  background-color: #F1F1F1;
+}

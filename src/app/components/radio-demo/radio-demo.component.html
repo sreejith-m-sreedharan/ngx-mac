@@ -1,0 +1,24 @@
+<ngx-mac-view [os]="os">
+  <ngx-mac-radio [os]="os" label="value1" [(ngModel)]="value" value="value1"></ngx-mac-radio>
+  <ngx-mac-radio [os]="os" label="value2" [(ngModel)]="value" value="value2"></ngx-mac-radio>
+</ngx-mac-view>
+<ngx-mac-view [os]="os">
+  <ngx-mac-radio [os]="os" label="checked" [checked]="checked" [disabled]="true"></ngx-mac-radio>
+</ngx-mac-view>
+
+<ngx-mac-view [os]="os" marginTop="20px">
+  <ngx-mac-box label="Code">
+    &lt;ngx-mac-radio [os]="'{{os}}'" label="value1" [(ngModel)]="'{{value}}'" value="value1">&lt;/ngx-mac-radio>
+    <br>
+    &lt;ngx-mac-radio [os]="'{{os}}'" label="value2" [(ngModel)]="'{{value}}'" value="value2">&lt;/ngx-mac-radio>
+    <br>
+    &lt;ngx-mac-radio [os]="'{{os}}'" label="checked" [checked]="{{checked}}">&lt;/ngx-mac-radio>
+  </ngx-mac-box>
+</ngx-mac-view>
+<ngx-mac-view [os]="os">
+  <ngx-mac-checkbox [os]="os" label="checked" [(ngModel)]="checked"></ngx-mac-checkbox>
+</ngx-mac-view>
+
+
+<app-os-switch [(os)]="os" (osChange)="osChange.emit($event)"
+               [(autoOs)]="autoOs" (autoOsChange)="autoOsChange.emit($event)"></app-os-switch>

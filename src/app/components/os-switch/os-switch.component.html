@@ -1,0 +1,5 @@
+<ngx-mac-view [os]="os" marginTop="20px">
+  <ngx-mac-checkbox [os]="os" label="auto" [(ngModel)]="autoOs" (ngModelChange)="change($event)"></ngx-mac-checkbox>
+  <ngx-mac-radio [os]="os" name="os" value="mac" label="mac" [(ngModel)]="os" (ngModelChange)="osChange.emit($event)" [disabled]="autoOs" ></ngx-mac-radio>
+  <ngx-mac-radio [os]="os" name="os" value="windows" label="windows" [(ngModel)]="os" (ngModelChange)="osChange.emit($event)" [disabled]="autoOs" ></ngx-mac-radio>
+</ngx-mac-view>

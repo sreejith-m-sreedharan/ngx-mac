@@ -1,0 +1,84 @@
+:host {
+  font: 13px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+}
+
+.tab-label-wrap {
+  user-select: none;
+  cursor: default;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+
+}
+.tab-label-wrap div {
+  user-select: none;
+  cursor: default;
+  background: #FFFFFF;
+  border-top: 1px solid #C7C7C7;
+  border-bottom: 1px solid #A6A6A6;
+  border-right: 1px solid #D8D8D8;
+  padding: 1px 12px 2px;
+  line-height: 16px;
+  font-size: 13px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0 1px, rgba(0, 0, 0, 0.1) 0 0 0.5px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+.tab-label-wrap div.selected {
+  background: -webkit-linear-gradient(top, #5AB2F6 0%, #0082FA 100%);
+  border-width: 1px 0 1px 1px;
+  border-style: solid;
+  border-color: #30A0F5 #0080F7 #0060FA;
+  color: white;
+}
+.tab-label-wrap div:first-child {
+  border-width: 1px;
+  border-style: solid;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-color: #C7C7C7 #D8D8D8 #A6A6A6 #B8B8B8;
+}
+.tab-label-wrap div:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-right: 1px solid #B8B8B8;
+}
+
+.tab-label-wrap div.selected.mousedown {
+  background: -webkit-linear-gradient(top, #3397F9 0%, #0068DF 100%);
+  border-color: #0093F9 #0061E9 #0040D8;
+}
+
+.tab-label-wrap div.selected.blur {
+  background: #E5E5E5;
+  border-color: #C7C7C7 #B7B7B7 #A6A6A6;
+  color: #000000;
+  border-left: none;
+}
+
+.tab-label-wrap div:first-child.selected.blur {
+  border-color: #C7C7C7 #B7B7B7 #B7B7B7 #A6A6A6;
+  border-left: 1px solid #B7B7B7;
+}
+
+.tab-label-wrap div.mousedown {
+  background: #F0F0F0;
+}
+
+.content-wrap {
+  width: 100%;
+  box-sizing: border-box;
+  user-select: none;
+  cursor: default;
+  flex: 1 1 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.07) rgba(0, 0, 0, 0.035) rgba(0, 0, 0, 0.027);
+  border-radius: 4px;
+  position: relative;
+  margin-top: -11px;
+  z-index: 0;
+}
